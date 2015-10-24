@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 
+#DB
+language/db*
+
 # C extensions
 *.so
 
