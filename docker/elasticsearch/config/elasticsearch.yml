@@ -37,14 +37,14 @@ cluster.name: language
 # Node names are generated dynamically on startup, so you're relieved
 # from configuring them manually. You can tie this node to a specific name:
 #
-node.name: "Language1"
+node.name: "language-elastic-1"
 
 # Every node can be configured to allow or deny being eligible as the master,
 # and to allow or deny to store the data.
 #
 # Allow this node to be eligible as a master node (enabled by default):
 #
-#node.master: true
+node.master: true
 #
 # Allow this node to store data (enabled by default):
 #
@@ -200,20 +200,20 @@ node.name: "Language1"
 
 # Set the bind address specifically (IPv4 or IPv6):
 #
-#network.bind_host: 192.168.0.220
+#network.bind_host: 192.168.0.210
 
 # Set the address other nodes will use to communicate with this node. If not
 # set, it is automatically derived. It must point to an actual IP address.
 #
-#network.publish_host: 192.168.0.220
+#network.publish_host: 192.168.0.210
 
 # Set both 'bind_host' and 'publish_host':
 #
-#network.host: 192.168.0.220
+#network.host: 192.168.0.210
 
 # Set a custom port for the node to node communication (9300 by default):
 #
-#transport.tcp.port: 9302
+transport.tcp.port: 9301
 
 # Enable compression for all communication between nodes (disabled by default):
 #
@@ -221,7 +221,7 @@ node.name: "Language1"
 
 # Set a custom port to listen for HTTP traffic:
 #
-http.port: 9201
+http.port: 9200
 
 # Set a custom allowed content length:
 #
