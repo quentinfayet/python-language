@@ -4,6 +4,7 @@ __pycache__/
 
 #DB
 language/db*
+**/.ropeproject
 
 # C extensions
 *.so
