@@ -15,3 +15,12 @@ python_app:
     links:
         - elasticsearch
 
+client:
+    build: ./client
+    volumes:
+        - "./client:/client"
+    ports:
+        - "80:80"
+    links:
+        - python_app
+
