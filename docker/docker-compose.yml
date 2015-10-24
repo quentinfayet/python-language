@@ -5,3 +5,11 @@ elasticsearch:
     volumes:
         - "./elasticsearch/config:/usr/share/elasticsearch/config"
 
+python_app:
+    build: ./application
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+        - ".:/application"
+    ports:
+        - "8000:8000"
+

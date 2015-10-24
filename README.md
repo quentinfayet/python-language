@@ -11,7 +11,7 @@ Language is an helpful application to learn English, Japanese and Chinese
 ## Install Python requirements with pip
 
 ```sh
-pip install -r requirements.txt
+pip install -r docker/application/requirements.txt
 ```
 
 # Docker
