@@ -12,4 +12,6 @@ python_app:
         - "../language:/application"
     ports:
         - "8000:8000"
+    links:
+        - elasticsearch
 
