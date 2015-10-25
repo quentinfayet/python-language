@@ -6,6 +6,12 @@ __pycache__/
 language/db*
 **/.ropeproject
 
+# Node
+**/node_modules
+
+# Bower
+**/bower_components
+
 # C extensions
 *.so
 
