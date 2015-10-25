@@ -21,6 +21,4 @@ client:
         - "./client:/client"
     ports:
         - "80:80"
-    links:
-        - python_app
 
