@@ -1,4 +1,5 @@
-from rest_framework import permissions, viewsets, Response, status
+from rest_framework import permissions, viewsets, status
+from rest_framework.response import Response
 from authentication.models import Account
 from authentication.permissions import IsAccountOwner
 from authentication.serializers import AccountSerializer
@@ -14,7 +15,7 @@ class AccountViewSet(viewsets.ModelViewSet):
             return (permissions.AllowAny(),)
 
         if self.request.method == 'POST':
-            return (permissions.AllowAny,)
+            return (permissions.AllowAny(),)
 
         return (permissions.IsAuthenticated(), IsAccountOwner(),)
 
@@ -30,4 +31,4 @@ class AccountViewSet(viewsets.ModelViewSet):
         return Response({
             'status': 'Bad request',
             'message': 'Cannot create account.'
-        }, status=status.HTTP_404_BAD_REQUEST)
+        }, status=status.HTTP_400_BAD_REQUEST)
