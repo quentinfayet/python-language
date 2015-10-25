@@ -2,7 +2,8 @@ var gulp = require('gulp');
 var ngAnnotate = require('gulp-ng-annotate');
 var uglify = require('gulp-uglify');
 
-gulp.task('default', ['build'], function () {
+gulp.task('watch', ['build'], function () {
+    gulp.watch(['static/js/**/*.js', 'static/js/**/**/*.js'], ['build']);
 });
 
 gulp.task('build', function () {

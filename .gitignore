@@ -12,6 +12,9 @@ language/db*
 # Bower
 **/bower_components
 
+# Public client folder
+client/public/js
+
 # C extensions
 *.so
 
