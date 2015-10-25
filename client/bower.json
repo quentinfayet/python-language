@@ -1,13 +1,14 @@
 {
-    "name": "language-client",
-    "version": "0.0.0",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test"
-    ],
-    "dependencies": {
-        "angular": "~1.4.7"
-    }
+  "name": "language-client",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-cookies": "~1.4.7"
+  }
 }
