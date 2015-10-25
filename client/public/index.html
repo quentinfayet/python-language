@@ -1,1 +1,21 @@
-Hello !
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>title</title>
+            <!--<link rel="stylesheet" href="style.css"> -->
+            <script src="libs/angular/angular.js"></script>
+            <script src="libs/angular-cookies/angular-cookies.js"></script>
+            <script src="js/authentication/services/authentication.service.js"></script>
+            <script src="js/authentication/controllers/register.controller.js"></script>     
+            <script src="js/authentication/authentication.js"></script>
+   </head>
+   <body ng-app="language.authentication" ng-controller="RegistrationController as vm">
+        <h1>Register</h1>
+        <form role="form" ng-submit="vm.register()">
+            <input type="text" ng-model="vm.username">
+            <button type="submit">Submit</button>
+        </form>
+       Hello Boys !
+   </body>
+</html>
