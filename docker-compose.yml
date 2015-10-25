@@ -22,4 +22,6 @@ client:
         - "./client/config/nginx.conf:/etc/nginx/nginx.conf:ro"
     ports:
         - "80:80"
+    links:
+        - python_app
 
