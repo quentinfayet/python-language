@@ -9,6 +9,6 @@ gulp.task('build', function () {
       return gulp.src('static/js/**/*.js')
           .pipe(ngAnnotate())
           .pipe(uglify())
-          .pipe(gulp.dest('dist/static/js/'));
+          .pipe(gulp.dest('public/js/'));
 });
 
