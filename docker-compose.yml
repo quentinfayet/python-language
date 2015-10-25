@@ -19,6 +19,7 @@ client:
     build: ./client
     volumes:
         - "./client:/client"
+        - "./client/config/nginx.conf:/etc/nginx/nginx.conf:ro"
     ports:
         - "80:80"
 
