@@ -5,7 +5,7 @@ elasticsearch:
     volumes:
         - "./elasticsearch/config:/usr/share/elasticsearch/config"
 
-python_app:
+pythonapp:
     build: ./application
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
@@ -21,7 +21,7 @@ client:
         - "./client:/client"
         - "./client/config/nginx.conf:/etc/nginx/nginx.conf:ro"
     ports:
-        - "80:80"
+        - "8080:80"
     links:
-        - python_app
+        - pythonapp
 
