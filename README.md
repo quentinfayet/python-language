@@ -23,3 +23,8 @@ Run from the `docker` folder with:
 ```sh
 docker-compose up
 ```
+
+3 containers:
+- application
+- client
+- db (elasticsearch)
