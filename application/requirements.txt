@@ -2,4 +2,5 @@ Django >= 1.8.5, <2.0
 djangorestframework >= 3.2
 django-rest-framework-nested
 elasticsearch
+psycopg2
 git+https://github.com/liberation/django_elasticsearch.git
