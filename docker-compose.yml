@@ -5,6 +5,15 @@ elasticsearch:
     volumes:
         - "./elasticsearch/config:/usr/share/elasticsearch/config"
 
+postgres:
+    build: ./postgres
+    volumes:
+        - "./postgres/data/data:/var/lib/postresql/data"
+    environment:
+        - POSTGRES_PASSWORD=toto
+    ports:
+        - "5432:5432"
+
 pythonapp:
     build: ./application
     command: python manage.py runserver 0.0.0.0:8000
@@ -14,6 +23,7 @@ pythonapp:
         - "8000:8000"
     links:
         - elasticsearch
+        - postgres
 
 client:
     build: ./client

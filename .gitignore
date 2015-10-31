@@ -6,6 +6,7 @@ __pycache__/
 language/db*
 **/.ropeproject
 application/**/*.sqlite3
+postrgres/data/*
 
 # Node
 **/node_modules
