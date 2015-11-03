@@ -1,11 +1,13 @@
 #!/bin/bash
 
 HOST="postgres"
-NOT_CONNECTED="no response"
 IS_OK="0"
+CONNECTION="0"
 
 until [ $IS_OK -eq "1" ]; do
-    if [ $(pg_isready -h postgres | grep -q "$NOT_CONNECTED") ]; then
+    pg_isready -h $HOST -q
+    CONNECTION=$(echo $?)
+    if [ "$CONNECTION" -ne "0" ]; then
         echo "Waiting"
         sleep 2
     else
