@@ -4,6 +4,8 @@ elasticsearch:
         - "9200:9200"
     volumes:
         - "./elasticsearch/config:/usr/share/elasticsearch/config"
+        - "./elasticsearch/data:/usr/share/elasticsearch/data"
+        - "./elasticsearch/logs:/usr/share/elasticsearch/logs"
 
 postgres:
     build: ./postgres
