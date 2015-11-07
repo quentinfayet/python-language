@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -75,16 +76,22 @@ WSGI_APPLICATION = 'language.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'language',
-        'USER': 'postgres',
-        'PASSWORD': 'toto',
-        'HOST': 'postgres',
-        'PORT': '5432'
+if 'test' in sys.argv:
+    try:
+        from test_settings import DATABASES
+    except ImportError:
+        pass
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'language',
+            'USER': 'postgres',
+            'PASSWORD': 'toto',
+            'HOST': 'postgres',
+            'PORT': '5432'
+        }
     }
-}
 
 
 # Internationalization
