@@ -1,5 +1,7 @@
 # Language
 
+[![Build Status](https://travis-ci.org/quentinfayet/python-language.svg?branch=master)](https://travis-ci.org/quentinfayet/python-language)
+
 Language is an helpful application to learn English, Japanese and Chinese
 
 # Requirements
@@ -75,6 +77,7 @@ a loss of data.
 
 ## Runing the containers
 
+Language runs under Docker micro containers.
 
 Run from the `docker` folder with:
 
