@@ -45,6 +45,24 @@ There are two databases systems used by Language application:
 data)
 - PostgreSQL (used for user credentials, etc.)
 
+## Connect the PostgreSQL database
+
+In order to connect to the PostgreSQL database, a postrgres client is required.
+**For development purposes, such a client has been set up into the `application`
+container.**
+
+To connect the docker container, se the corresponsing section, under "Docker".
+
+Once you established a shell between host and the app's docker container, you
+will be able to connect the PostgreSQL client this way:
+
+```sh
+psql -hpostgres -Upostgres
+```
+
+Then, the prompt will ask you for the password, which, **in development environnement**
+has been set to `toto` (yes, I have a very fertile imagination, I know that).
+
 # Docker
 
 Language runs under Docker micro containers.
@@ -86,7 +104,23 @@ Run from the `docker` folder with:
 docker-compose up
 ```
 
-3 containers:
+4 containers:
 - application
 - client
 - db (elasticsearch)
+- db (postgresql)
+
+## Connect to a running container *via* a remote shell
+
+In order to connect a **running** container, first, you need to get its ID:
+
+```sh
+docker ps
+```
+
+Once you spotted the corresponding container in the prompted table, copy its ID.
+Then, connect to it *via*:
+
+```sh
+docker exec -it [CONTAINER_ID_GOES_HERE] /bin/bash
+```
