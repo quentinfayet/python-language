@@ -18,7 +18,7 @@ postgres:
 
 pythonapp:
     build: ./application
-    command: sh run.sh & #python manage.py runserver 0.0.0.0:8000
+    command: sh run.sh &
     volumes:
         - "./application/language:/application"
     ports:
