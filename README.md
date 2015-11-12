@@ -45,7 +45,9 @@ There are two databases systems used by Language application:
 data)
 - PostgreSQL (used for user credentials, etc.)
 
-## Connect the PostgreSQL database
+## PostgreSQL database
+
+### Connection *via* a shell
 
 In order to connect to the PostgreSQL database, a postrgres client is required.
 **For development purposes, such a client has been set up into the `application`
@@ -65,6 +67,16 @@ has been set to `toto` (yes, I have a very fertile imagination, I know that).
 
 As a reminder, to connect a specific database use `\c db_name`, to list databases use
 `\l`, to quit the shell use `\q`
+
+### Setup the database with Django
+
+**First, ensure that the dabase named `language` exists**
+
+Once connected to the application container, executing the following command will synchronize the Django models with the database:
+
+```sh
+python manage.py migrate
+```
 
 # Docker
 
