@@ -63,6 +63,9 @@ psql -hpostgres -Upostgres
 Then, the prompt will ask you for the password, which, **in development environnement**
 has been set to `toto` (yes, I have a very fertile imagination, I know that).
 
+As a reminder, to connect a specific database use `\c db_name`, to list databases use
+`\l`, to quit the shell use `\q`
+
 # Docker
 
 Language runs under Docker micro containers.
