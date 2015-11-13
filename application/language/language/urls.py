@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from rest_framework_nested import routers
-from authentication.views import AccountViewSet
+from authentication.views import AccountViewSet, LoginView
 
 router = routers.SimpleRouter()
 router.register(r'accounts', AccountViewSet)
 
 urlpatterns = [
     url(r'^api/v1/', include(router.urls)),
+    url(r'^api/v1/auth/login/$', LoginView.as_view(), name='login')
 ]
