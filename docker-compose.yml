@@ -9,12 +9,18 @@ elasticsearch:
 
 postgres:
     build: ./postgres
-    volumes:
-        - "./postgres/data/data:/var/lib/postresql/data"
+    volumes_from:
+        - postgresdata
     environment:
         - POSTGRES_PASSWORD=toto
     ports:
         - "5432:5432"
+
+postgresdata:
+    image: busybox
+    command: echo "Data volume launched" && true
+    volumes:
+        - "/User/quentin/Workspace/language/postgres/data:/var/lib/postgresql/data"
 
 pythonapp:
     build: ./application
