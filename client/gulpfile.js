@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var ngAnnotate = require('gulp-ng-annotate');
 var uglify = require('gulp-uglify');
+var sass = require('gulp-sass');
+var rename = require('gulp-rename');
 
 gulp.task('watch', ['build', 'copy-bower-components'], function () {
     gulp.watch(['static/js/**/*.js',
@@ -9,6 +11,18 @@ gulp.task('watch', ['build', 'copy-bower-components'], function () {
                ['build',
                'copy-bower-components',
                ]);
+    gulp.watch(['static/sass/**/*.scss'],
+               ['style']);
+});
+
+gulp.task('style', function () {
+    return gulp.src('static/sass/*.scss')
+          .pipe(sass().on('error', sass.logError))
+          .pipe(rename(function (path) {
+            path.basename = 'style';
+            path.extname = '.css';
+          }))
+          .pipe(gulp.dest('public/css'));
 });
 
 gulp.task('build', function () {
