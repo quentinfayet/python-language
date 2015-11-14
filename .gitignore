@@ -18,6 +18,7 @@ elasticsearch/data
 # Public client folder
 client/public/js
 client/public/libs
+client/public/css
 
 # C extensions
 *.so
