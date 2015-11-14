@@ -11,6 +11,7 @@ Language is an helpful application to learn English, Japanese and Chinese
 - Python
 - Docker
 - Docker Toolbox (if under Windows or Mac OSX)
+- Postgres client (psql)
 
 ## Install Python requirements with pip
 
