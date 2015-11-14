@@ -128,6 +128,22 @@ docker-compose up
 
 ## Connect to a running container *via* a remote shell
 
+### Connect to the python application container
+
+If you want to connect to the python application container, use the `shell.sh`
+in the rood directory of the project:
+
+```sh
+./shell.sh
+```
+
+If you get an error while runing this script, you can either:
+- Run it with `sh shell.sh`
+- Apply `chmod u+x shell.sh` on it
+- Use the "classical" way to connect a container using `docker exec`
+
+### Connect to an other container
+
 In order to connect a **running** container, first, you need to get its ID:
 
 ```sh
