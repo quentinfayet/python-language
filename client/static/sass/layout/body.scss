@@ -1,12 +1,16 @@
 body {
     font: 400 14px/1.42 Roboto, sans-serif;
     min-height: 100%;
-    box-sizing: boder-box;
+    box-sizing: border-box;
     margin: 0;
-    #body--login {
-        font-size: 15px;
-        padding: 64px 24px;
-        overflow-y: auto;
-        height: auto;
+    background-color: transparent !important;
+    
+    &#body {
+        &--login {
+            font-size: 15px;
+            padding: 64px 24px;
+            overflow-y: auto;
+            height: auto;
+        }
     }
 }

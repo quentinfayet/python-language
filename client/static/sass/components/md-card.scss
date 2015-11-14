@@ -1,0 +1,10 @@
+md-card {
+    background-color: #fff;
+    margin: 0;
+    
+    > md-card-content {
+        &.md-card--large-padding {
+            padding: 24px 35px;
+        }
+    }
+}
