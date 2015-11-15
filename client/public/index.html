@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="language.authentication">
+<html lang="en" ng-app="Language">
     <head>
         <meta charset="utf-8">
         <title>title</title>
@@ -15,8 +15,9 @@
         <script src="js/authentication/services/authentication.service.js"></script>
         <script src="js/authentication/controllers/register.controller.js"></script>
         <script src="js/authentication/authentication.js"></script>
+        <script src="js/language.js"></script>
     </head>
-   <body layout="row" ng-controller="RegistrationController as vm">
+   <body layout="row" ng-controller="RegistrationController as registration">
    <div layout="column" class="relative" layout-fill role="main">
        <md-content flex md-scroll-y>
            <ui-view layout="column" layout-fill layout-padding>
@@ -25,21 +26,25 @@
                         id="tab1-content"
                         aria-labelledby="tab1"
                         layout="row" layout-align="center center">
-                       <md-card flex-gt-sm="90" flex-gt-md="60" flex-gt-lg="30" class="login">
+                       <md-card flex-gt-sm="90" flex-gt-md="60" flex-gt-lg="30" class="login-card">
                            <md-card-content>
-                               <div class="login__header">
-                                   <div class="user_avatar"></div>
+                               <div class="login-card__header">
+                                   <div class="login-card__user-avatar"></div>
                                </div>
                                <form action="">
                                    <md-input-container>
+                                       <label>Email</label>
+                                       <input type="email" ng-model="registration.email" required>
+                                   </md-input-container>
+                                   <md-input-container>
                                        <label>Username</label>
-                                       <input type="text" required>
+                                       <input type="text" ng-model="registration.username" maxlength="20" required>
                                    </md-input-container>
                                    <md-input-container>
                                        <label>Password</label>
-                                       <input type="password" required>
+                                       <input type="password" ng-model="registration.password" required>
                                    </md-input-container>
-                                   <md-button class="md-raised md-primary">Login</md-button>
+                                   <md-button class="md-raised md-primary">Register</md-button>
                                </form>
                            </md-card-content>
                        </md-card>

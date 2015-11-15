@@ -1,0 +1,30 @@
+md-card.login-card {
+
+  > md-card-content {
+
+    > .login-card__header {
+      text-align: center;
+      margin-bottom: 32px;
+
+      > .login-card__user-avatar {
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        background-image: url(../images/avatars/user.png);
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, .085);
+        background-position: 50% 1px;
+      }
+    }
+
+    > form {
+
+      > .md-button {
+        margin: 6px 0px;
+        width: 100%;
+      }
+    }
+  }
+}

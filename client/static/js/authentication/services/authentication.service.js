@@ -1,7 +1,3 @@
-angular
-    .module('language.authentication.services', ['ngCookies'])
-    .factory('Authentication', ['$cookies', '$http', Authentication]);
-
 function Authentication($cookies, $http) {
     var authentication = {
         register: register,
@@ -59,3 +55,6 @@ function Authentication($cookies, $http) {
     }
 }
 
+angular
+    .module('Language.Authentication.services', ['ngCookies'])
+    .factory('Authentication', ['$cookies', '$http', Authentication]);

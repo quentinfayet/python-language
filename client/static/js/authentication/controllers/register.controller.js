@@ -8,5 +8,5 @@ function RegistrationController ($location, $scope, Authentication) {
     }
 }
 
-angular.module('language.authentication.controllers', ['language.authentication.services'])
+angular.module('Language.Authentication.controllers', ['Language.Authentication.services'])
 .controller('RegistrationController', ['$location', '$scope', 'Authentication', RegistrationController]);

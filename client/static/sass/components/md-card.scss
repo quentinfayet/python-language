@@ -1,34 +1,4 @@
 md-card {
-    background-color: #fff;
-    margin: 0;
-
-    &.login {
-        > md-card-content {
-            > .login__header {
-                text-align: center;
-                margin-bottom: 32px;
-
-                > .user_avatar {
-                    width: 64px;
-                    height: 64px;
-                    display: inline-block;
-                    text-align: center;
-                    border-radius: 50%;
-                    background-image: url(../images/avatars/user.png);
-                    background-repeat: no-repeat;
-                    background-color: rgba(0, 0, 0, .085);
-                    background-position: 50% 1px;
-                }
-            }
-            > form {
-                > .md-button {
-                    margin: 6px 0px;
-                    width: 100%;
-                }
-            }
-        }
-    }
-    
     > md-card-content {
         &.md-card--large-padding {
             padding: 24px 35px;
