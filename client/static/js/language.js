@@ -1,3 +1,5 @@
+require('./authentication/authentication');
+
 angular.module('Language', ['Language.Authentication'])
     .config(function($mdThemingProvider) {
     var customBlueMap = 		$mdThemingProvider.extendPalette('light-blue', {

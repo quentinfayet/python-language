@@ -3,6 +3,8 @@ var ngAnnotate = require('gulp-ng-annotate');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
+var browserify = require('gulp-browserify');
+var concat = require('gulp-concat');
 
 gulp.task('watch', ['build', 'copy-bower-components'], function () {
     gulp.watch(['static/js/**/*.js',
@@ -26,10 +28,15 @@ gulp.task('style', function () {
 });
 
 gulp.task('build', function () {
-    return gulp.src('static/js/**/*.js')
-          .pipe(ngAnnotate())
-          .pipe(uglify())
-          .pipe(gulp.dest('public/js/'));
+    return gulp.src('static/js/language.js')
+        .pipe(browserify({
+            insertGlobal: true,
+            debug: true
+        }))
+        .pipe(ngAnnotate())
+        .pipe(uglify())
+        .pipe(concat('language.js'))
+        .pipe(gulp.dest('public/js/'));
 });
 
 gulp.task('copy-bower-components', function() {

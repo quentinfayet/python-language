@@ -1,3 +1,5 @@
+require('../services/authentication.service');
+
 function RegistrationController ($location, $scope, Authentication) {
     var vm = this;
 
