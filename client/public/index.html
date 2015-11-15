@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--            <script src="libs/angular/angular.js"></script>-->
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-aria.js"></script>
@@ -14,40 +15,6 @@
         <script src="libs/angular-cookies/angular-cookies.js"></script>
         <script src="js/language.js"></script>
     </head>
-   <body layout="row" ng-controller="RegistrationController as registration">
-   <div layout="column" class="relative" layout-fill role="main">
-       <md-content flex md-scroll-y>
-           <ui-view layout="column" layout-fill layout-padding>
-               <div class="inset" hide-sm></div>
-                   <div role="tabpanel"
-                        id="tab1-content"
-                        aria-labelledby="tab1"
-                        layout="row" layout-align="center center">
-                       <md-card flex-gt-sm="90" flex-gt-md="60" flex-gt-lg="30" class="login-card">
-                           <md-card-content>
-                               <div class="login-card__header">
-                                   <div class="login-card__user-avatar"></div>
-                               </div>
-                               <form ng-submit="registration.register()">
-                                   <md-input-container>
-                                       <label>Email</label>
-                                       <input type="email" ng-model="registration.email" required>
-                                   </md-input-container>
-                                   <md-input-container>
-                                       <label>Username</label>
-                                       <input type="text" ng-model="registration.username" maxlength="20" required>
-                                   </md-input-container>
-                                   <md-input-container>
-                                       <label>Password</label>
-                                       <input type="password" ng-model="registration.password" required>
-                                   </md-input-container>
-                                   <md-button class="md-raised md-primary">Register</md-button>
-                               </form>
-                           </md-card-content>
-                       </md-card>
-                   </div>
-           </ui-view>
-       </md-content>
-   </div>
+   <body layout="row" ng-view>
    </body>
 </html>

@@ -1,8 +1,7 @@
 require('./authentication/authentication');
 
-angular.module('Language', ['Language.Authentication'])
-    .config(function($mdThemingProvider) {
-    var customBlueMap = 		$mdThemingProvider.extendPalette('light-blue', {
+function config($mdThemingProvider, $routeProvider) {
+    var customBlueMap = $mdThemingProvider.extendPalette('light-blue', {
         'contrastDefaultColor': 'light',
         'contrastDarkColors': ['50'],
         '50': 'ffffff'
@@ -15,5 +14,14 @@ angular.module('Language', ['Language.Authentication'])
         })
         .accentPalette('pink');
     $mdThemingProvider.theme('input', 'default')
-        .primaryPalette('grey')
-});
+        .primaryPalette('grey');
+
+    $routeProvider
+        .when('/', {
+            templateUrl: 'pages/home.html',
+            controller: 'RegistrationController'
+        });
+}
+
+angular.module('Language', ['Language.Authentication', 'ngRoute'])
+    .config(config);
