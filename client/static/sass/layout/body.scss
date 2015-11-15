@@ -3,14 +3,4 @@ body {
     min-height: 100%;
     box-sizing: border-box;
     margin: 0;
-    background-color: transparent !important;
-    
-    &#body {
-        &--login {
-            font-size: 15px;
-            padding: 64px 24px;
-            overflow-y: auto;
-            height: auto;
-        }
-    }
 }
