@@ -12,6 +12,7 @@ until [ $IS_OK -eq "1" ]; do
         sleep 2
     else
         echo "Launching"
-        IS_OK="1" && python manage.py runserver
+        IS_OK="1"
+        python manage.py runserver 0.0.0.0:8000
     fi
 done
