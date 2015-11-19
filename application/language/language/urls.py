@@ -21,6 +21,6 @@ router = routers.SimpleRouter()
 router.register(r'accounts', AccountViewSet)
 
 urlpatterns = [
-    url(r'^api/v1/', include(router.urls)),
-    url(r'^api/v1/auth/login/$', LoginView.as_view(), name='login')
+    url(r'^api1/', include(router.urls)),
+    url(r'^api1/auth/login/$', LoginView.as_view(), name='login')
 ]
