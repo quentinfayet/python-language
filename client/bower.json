@@ -9,6 +9,7 @@
   ],
   "dependencies": {
     "angular": "~1.4.7",
-    "angular-cookies": "~1.4.7"
+    "angular-cookies": "~1.4.7",
+    "angular-ui-notification": "~0.1.0"
   }
 }

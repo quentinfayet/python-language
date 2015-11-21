@@ -1,6 +1,6 @@
 require('./authentication/authentication');
 
-function config($mdThemingProvider, $routeProvider) {
+function config($mdThemingProvider, $routeProvider, NotificationProvider) {
     var customBlueMap = $mdThemingProvider.extendPalette('light-blue', {
         'contrastDefaultColor': 'light',
         'contrastDarkColors': ['50'],
@@ -21,7 +21,16 @@ function config($mdThemingProvider, $routeProvider) {
             templateUrl: 'pages/home.html',
             controller: 'RegistrationController'
         });
+    NotificationProvider.setOptions({
+        delay: 10000,
+        startTop: 20,
+        startRight: 10,
+        verticalSpacing: 20,
+        horizontalSpacing: 20,
+        positionX: 'left',
+        positionY: 'bottom'
+    });
 }
 
-angular.module('Language', ['Language.Authentication', 'ngRoute'])
+angular.module('Language', ['Language.Authentication', 'ngRoute', 'ui-notification'])
     .config(config);
