@@ -18,7 +18,7 @@ function config($mdThemingProvider, $routeProvider, $locationProvider, Notificat
 
     $routeProvider
         .when('/', {
-            templateUrl: 'pages/home.html',
+            templateUrl: 'pages/authentication/login.html',
             controller: 'LoginController',
             controllerAs: 'login'
         })
