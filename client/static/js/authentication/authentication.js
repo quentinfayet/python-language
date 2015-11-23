@@ -1,3 +1,3 @@
-require('./controllers/register.controller');
+require('./controllers/controller');
 
 angular.module('Language.Authentication', ['Language.Authentication.controllers', 'ngMaterial']);

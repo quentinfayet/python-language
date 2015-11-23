@@ -19,8 +19,15 @@ function config($mdThemingProvider, $routeProvider, NotificationProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'pages/home.html',
-            controller: 'RegistrationController'
+            controller: 'LoginController',
+            controllerAs: 'login'
+        })
+        .when('/register', {
+            templateUrl: 'pages/authentication/register.html',
+            controller: 'RegistrationController',
+            controllerAs: 'registration'
         });
+
     NotificationProvider.setOptions({
         delay: 10000,
         startTop: 20,

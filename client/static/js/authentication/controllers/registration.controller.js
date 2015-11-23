@@ -1,6 +1,4 @@
-require('../services/authentication.service');
-
-function RegistrationController ($location, $scope, Authentication, Notification) {
+function RegistrationController ($scope, Authentication, Notification) {
     var vm = this;
 
     vm.register = register;
@@ -14,5 +12,5 @@ function RegistrationController ($location, $scope, Authentication, Notification
     }
 }
 
-angular.module('Language.Authentication.controllers', ['Language.Authentication.services', 'ui-notification'])
-.controller('RegistrationController', ['$location', '$scope', 'Authentication', 'Notification', RegistrationController]);
+angular.module('Language.Authentication.controllers')
+.controller('RegistrationController', ['$scope', 'Authentication', 'Notification', RegistrationController]);
