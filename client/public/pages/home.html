@@ -1,11 +1,7 @@
 <div layout="column" class="relative" layout-fill role="main">
     <md-content flex md-scroll-y>
         <ui-view layout="column" layout-fill layout-padding>
-            <div class="inset" hide-sm></div>
-            <div role="tabpanel"
-                 id="tab1-content"
-                 aria-labelledby="tab1"
-                 layout="row" layout-align="center center">
+            <div layout="row" layout-align="center center">
                 <md-card flex-gt-sm="90" flex-gt-md="60" flex-gt-lg="30" class="login-card">
                     <md-card-content>
                         <div class="login-card__header">
@@ -24,10 +20,13 @@
                                 <label>Password</label>
                                 <input type="password" ng-model="registration.password" required>
                             </md-input-container>
-                            <md-button class="md-raised md-primary">Register</md-button>
+                            <md-button class="md-raised md-primary">Login</md-button>
                         </form>
                     </md-card-content>
                 </md-card>
+            </div>
+            <div layout="row" layout-align="center center">
+                <a ng-href="/register">Create an account</a>
             </div>
         </ui-view>
     </md-content>

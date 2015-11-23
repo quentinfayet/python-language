@@ -1,6 +1,6 @@
 require('./authentication/authentication');
 
-function config($mdThemingProvider, $routeProvider, NotificationProvider) {
+function config($mdThemingProvider, $routeProvider, $locationProvider, NotificationProvider) {
     var customBlueMap = $mdThemingProvider.extendPalette('light-blue', {
         'contrastDefaultColor': 'light',
         'contrastDarkColors': ['50'],
@@ -37,7 +37,9 @@ function config($mdThemingProvider, $routeProvider, NotificationProvider) {
         positionX: 'left',
         positionY: 'bottom'
     });
+
+    $locationProvider.html5Mode(true);
 }
 
 angular.module('Language', ['Language.Authentication', 'ngRoute', 'ui-notification'])
-    .config(config);
+    .config(['$mdThemingProvider', '$routeProvider', '$locationProvider', 'NotificationProvider', config]);
