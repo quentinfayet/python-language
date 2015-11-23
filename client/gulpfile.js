@@ -8,7 +8,7 @@ var concat = require('gulp-concat');
 
 gulp.task('watch', ['build', 'copy-bower-components'], function () {
     gulp.watch(['static/js/**/*.js',
-               'static/js/**/**/*.js',
+                'static/js/**/**/*.js',
                ],
                ['build',
                'copy-bower-components',
