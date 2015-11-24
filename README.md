@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/quentinfayet/python-language.svg?branch=master)](https://travis-ci.org/quentinfayet/python-language)
 [![Documentation Status](https://readthedocs.org/projects/language/badge/?version=latest)](http://language.readthedocs.org/en/latest/?badge=latest)
+[![Stories in Ready](https://badge.waffle.io/quentinfayet/python-language.png?label=ready&title=Ready)](https://waffle.io/quentinfayet/python-language)
 
 Language is an helpful application to learn English, Japanese and Chinese
 
